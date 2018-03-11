@@ -1,7 +1,7 @@
 ﻿  DBSCAN.cpp
 c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(96): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(132): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(152): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(175): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(137): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(157): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\edwin\documents\visual studio 2015\projects\dbscan\dbscan\dbscan.cpp(180): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   DBSCAN.vcxproj -> C:\Users\Edwin\Documents\Visual Studio 2015\Projects\DBSCAN\x64\Debug\DBSCAN.exe
   DBSCAN.vcxproj -> C:\Users\Edwin\Documents\Visual Studio 2015\Projects\DBSCAN\x64\Debug\DBSCAN.pdb (Partial PDB)

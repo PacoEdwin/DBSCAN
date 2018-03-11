@@ -99,22 +99,27 @@ void opencv()
 	
 	for (int i = 0; i < v.size(); i++)
 	{
-		cv::Point p;
+		if (graphs[v[i]->cluster].size() > 100)
+		{
+			cv::Point p;
 			p.x = v[i]->c[0];
 			p.y = v[i]->c[1];
 			circle(img, p, 2, colorTab[v[i]->cluster], cv::FILLED, cv::LINE_AA);
+		}
 	}
-	cv::imshow("clusters", img);
-	//vector<int> compression_params;
-	//compression_params.push_back(IMWRITE_PNG_COMPRESSION);
-	//compression_params.push_back(9);
-	////imwrite("mask7_result.jpg", img, compression_params);
-	cv::waitKey();
+	//cv::imshow("clusters", img);
+	vector<int> compression_params;
+	compression_params.push_back(cv::IMWRITE_PNG_COMPRESSION);
+	compression_params.push_back(9);
+	imwrite("mask6_result.jpg", img, compression_params);
+	//cv::waitKey();
 }
-
 void dfs(weight::data* u)
 {
 	u->color = "gray";
+	if (u->pos == 2042)
+		int kek = 2;
+	//cout << u->pos << endl;
 	for (int i = 0; i < v.size(); i++)
 	{
 		double dist = euclidian(v[i]->c[0], v[i]->c[1], u->c[0], u->c[1]);
@@ -163,7 +168,7 @@ void dfs(weight::data* u)
 //vector of graphs need to be created;
 int main()
 {
-	ifstream  fin("mask_7.csv");
+	ifstream  fin("mask_5.csv");
 	string value;
 	//cout << "Enter neighborhood: ";
 	//cin >> neighborhood;
@@ -234,14 +239,13 @@ int main()
 	size_x = size_y = max(size_x, size_y);
 	for (int i = 0; i < v.size(); i++)
 	{
-		//cout << i << endl;
 		if (v[i]->color == "white")
 		{
 			graphs.resize(graphs.size() + 1);
 			dfs(v[i]);
 		}
 	}
-	opencv();
+	//opencv();
 	//opencv(graphs);
 	//vector<vector<double>> centroids = kmeans(3, 0);
 	std::system("pause");
